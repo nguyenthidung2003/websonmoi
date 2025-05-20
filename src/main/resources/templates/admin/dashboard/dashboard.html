@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/layout-main/layout-main}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<div layout:fragment="content">
+    <h1 class="mb-5 text-color-main">THỐNG KÊ</h1>
+
+    <div class="row g-4 mb-4">
+        <div class="col-6 col-lg-3">
+            <div class="app-card app-card-stat shadow-sm h-100">
+                <div class="app-card-body p-3 p-lg-4">
+                    <h4 class="stats-type mb-1">SỐ ĐƠN CẦN XỬ LÝ</h4>
+                    <div class="stats-figure" th:text="${numberOrderProcessing}"></div>
+                </div><!--//app-card-body-->
+            </div><!--//app-card-->
+        </div><!--//col-->
+
+        <div class="col-6 col-lg-3">
+            <div class="app-card app-card-stat shadow-sm h-100">
+                <div class="app-card-body p-3 p-lg-4">
+                    <h4 class="stats-type mb-1">SỐ ĐƠN ĐANG GIAO</h4>
+                    <div class="stats-figure" th:text="${numberOrderShipped}"></div>
+                </div><!--//app-card-body-->
+            </div><!--//app-card-->
+        </div><!--//col-->
+        <div class="col-6 col-lg-3">
+            <div class="app-card app-card-stat shadow-sm h-100">
+                <div class="app-card-body p-3 p-lg-4">
+                    <h4 class="stats-type mb-1">SỐ ĐƠN THÀNH CÔNG</h4>
+                    <div class="stats-figure" th:text="${numberOrderDelivered}"></div>
+                </div><!--//app-card-body-->
+            </div><!--//app-card-->
+        </div><!--//col-->
+        <div class="col-6 col-lg-3">
+            <div class="app-card app-card-stat shadow-sm h-100">
+                <div class="app-card-body p-3 p-lg-4">
+                    <h4 class="stats-type mb-1">SỐ ĐƠN HỦY</h4>
+                    <div class="stats-figure" th:text="${numberOrderCancelled}"></div>
+                </div><!--//app-card-body-->
+            </div><!--//app-card-->
+        </div><!--//col-->
+
+    </div>
+</div>
+</body>
+</html>
